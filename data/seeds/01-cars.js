@@ -9,7 +9,7 @@ const cars = [
 
     },
     {
-        vin: '123456789012345678',
+        vin: '1234567890123846378',
         make: 'honda',
         model: 'accord',
         mileage: 123445,
@@ -18,7 +18,7 @@ const cars = [
 
     },
     {
-        vin: '123456789012345678',
+        vin: '123456789013451678',
         make: 'toyota',
         model: 'supra',
         mileage: 123445,
@@ -27,7 +27,7 @@ const cars = [
 
     },
     {
-        vin: '123456789012345678',
+        vin: '0987456789012345678',
         make: 'pontiac',
         model: 'firebird',
         mileage: 123445,
