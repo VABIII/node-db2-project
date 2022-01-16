@@ -13,7 +13,6 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
     return knex.schema.dropTableIfExists('cars')
-
 };
 
 // If more than one table, they must be dropped in the opposite order they were inserted into the db
