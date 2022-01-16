@@ -23,8 +23,25 @@ router.get('/', async (req, res, next) => {
 
 })
 
+// router.get('/:id',  (req, res, next) => {
+//     const { id } = req.params
+//     Cars.getById(id)
+//         .then(car => {
+//             res.json(car)
+//         })
+//         .catch(next)
+// })
+
 router.get('/:id', async (req, res, next) => {
-    res.json(`getting car with id ${req.params.id}`)
+    const { id } = req.params
+    try {
+        const car = await Cars.getById(id)
+        res.json(car)
+    }
+    catch(err) {
+        next(err)
+    }
+
 })
 
 router.post('/', async (req, res, next) => {
