@@ -25,16 +25,16 @@ router.get('/', async (req, res, next) => {
 
 })
 
-router.get('/:id',  checkCarId, (req, res, next) => {
+router.get('/:id', checkCarId, (req, res, next) => {
 
-    res.json(req.car)
-    // const { id } = req.params
-    // Cars.getById(id)
-    //     .then(car => {
-    //         console.log(req.car)
-    //         res.json(car)
-    //     })
-    //     .catch(next)
+    // res.json(req.car)
+    const { id } = req.params
+    Cars.getById(id)
+        .then(car => {
+            console.log(req.car)
+            res.json(car)
+        })
+        .catch(next)
 })
 
 // router.get('/:id', checkCarId, async (req, res, next) => {
@@ -49,17 +49,12 @@ router.get('/:id',  checkCarId, (req, res, next) => {
 //
 // })
 
-router.post('/',  (req, res, next) => {
+router.post('/', checkCarPayload, checkVinNumberValid, checkVinNumberUnique,  (req, res, next) => {
     Cars.create(req.body)
-        .then(({id}) => {
-            return Cars.getById(id)
-        })
         .then(newCar => {
-            res.status(201).json(newCar)
+            res.json(newCar)
         })
         .catch(next)
-
-
 })
 
 

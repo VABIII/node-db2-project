@@ -1,6 +1,6 @@
 const cars = [
     {
-        vin: '123456789012345678',
+        vin: 'JH4CC2560PC005719',
         make: 'toyota',
         model: 'tundra',
         mileage: 123445,
@@ -9,7 +9,7 @@ const cars = [
 
     },
     {
-        vin: '1234567890123846378',
+        vin: '1J4GZ58S8SC549867',
         make: 'honda',
         model: 'accord',
         mileage: 123445,
@@ -18,7 +18,7 @@ const cars = [
 
     },
     {
-        vin: '123456789013451678',
+        vin: '2FABP7EV7BX127047',
         make: 'toyota',
         model: 'supra',
         mileage: 123445,
@@ -27,7 +27,7 @@ const cars = [
 
     },
     {
-        vin: '0987456789012345678',
+        vin: 'JH4DB8580RS000024',
         make: 'pontiac',
         model: 'firebird',
         mileage: 123445,
@@ -51,9 +51,9 @@ exports.seed = async function(knex) {
 // }
 
 
-
-
-
+// JH4KA4552LC005350
+// 2G1WF52E859227943
+// JS1RF16C442100152
 
 
 
